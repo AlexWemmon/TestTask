@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Book>
+@{ Layout = "_Layout"; ViewBag.Title = "Список всех книг";}
+
+<h2 class="h2">Список всех книг</h2>
+
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+            <th>Информация</th>
+            <th>Удалить</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Name</td>
+                <td>@book.Description</td>
+                <td>@book.Price</td>
+                <td>
+                    <a asp-controller="Home" asp-action="BookDetails" asp-route-Id="@book.Id" class="btn btn-info">Информация</a>
+                </td>
+                <td>
+                    <a asp-controller="Home" asp-action="DeleteBook" asp-route-bookId="@book.Id" class="btn btn-danger">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="custom-control">
+    <a asp-action="AddBook" class="btn btn-sm btn-primary">Добавить книгу</a>
+</div>
