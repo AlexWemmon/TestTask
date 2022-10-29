@@ -8,8 +8,8 @@
 ![image](https://user-images.githubusercontent.com/47531968/198840717-e21e3cbd-13fd-45a0-82c6-3f27d596dd5c.png)
 
 Там прописываем следующие строчки по очереди, вторую команду только после сообщения об успешном применении первой:<br>
-**add-migration initial -project BookAPI
-update-database -project BookAPI**<br>
+**add-migration initial -project BookAPI**<br>
+**update-database -project BookAPI**<br>
 ##### **2) Проверяем параметры запуска:**
 Правой кнопкой мыши нажимаем на **Решение**, выбираем пункт **Свойства**.<br>
 ![image](https://user-images.githubusercontent.com/47531968/198841113-2ad3bd6e-0cbd-4e83-8543-1aff63495904.png)<br>
